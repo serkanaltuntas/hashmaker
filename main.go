@@ -69,14 +69,11 @@ func listDirContents(path string, dirs []string) {
 				listDirContents(newPath, dirs)
 			}
 		} else {
-			// fmt.Println(newPath)
-
 			hash, err := md5File(newPath)
 			if err != nil {
 				fmt.Println(err)
 			}
 
-			// get filename from path
 			filename := filepath.Base(newPath)
 
 			log.Printf("%s \t %s \t %s\n", filename, hash, newPath)

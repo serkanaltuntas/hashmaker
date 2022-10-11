@@ -1,9 +1,0 @@
-GOOS=target-OS GOARCH=target-architecture go build
-
-GOOS=windows GOARCH=amd64 go build
-
-
-./hashmaker -path folderA -file sonuc.txt
-
-./hashmaker -path "." -file "output.txt"
-
